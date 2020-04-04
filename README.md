@@ -19,3 +19,9 @@ chmod 700 run.sh
 This will start the container called omada-controller, which you can also use as name for starting it next time:
 
 docker start omada-controller
+
+# Cleanup you docker images again
+
+docker stop omada-controller
+docker rm omada-controller
+docker rmi omada-controller:3.2.6

@@ -1,7 +1,7 @@
 #!/bin/bash
-mkdir -p /opt/docker/tplink/OmadaController/data
-mkdir -p /opt/docker/tplink/OmadaController/work
-mkdir -p /opt/docker/tplink/OmadaController/logs
+mkdir -p /opt/tplink/OmadaController/data
+mkdir -p /opt/tplink/OmadaController/work
+mkdir -p /opt/tplink/OmadaController/logs
 
 chown -R 508:508 /opt/docker/tplink
 
