@@ -26,9 +26,9 @@ RUN \
 
 RUN \
   echo "**** Install Omada Controller ****" &&\
-  DEBIAN_FRONTEND="noninteractive" dpkg -i /tmp/omada-controller_3.2.6-1_all.deb
+  DEBIAN_FRONTEND="noninteractive" dpkg -i /tmp/omada-controller_3.2.9-1_all.deb
 
-RUN rm -f /tmp/omada-controller_3.2.6-1_all.deb && rm -f /usr/sbin/policy-rc.d 
+RUN rm -f /tmp/omada-controller_3.2.9-1_all.deb && rm -f /usr/sbin/policy-rc.d 
 
 WORKDIR /opt/tplink/OmadaController
 EXPOSE 8088 8043 27001/udp 27002 29810/udp 29811 29812 29813
