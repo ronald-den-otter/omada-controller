@@ -18,7 +18,7 @@ RUN \
 RUN \
   echo "*** Download Omada Controller ****" &&\
   cd /tmp &&\
-  wget ftp://ftp.rent-a-guru.de/private/omada-controller_3.2.6-1_all.deb 
+  wget ftp://ftp.rent-a-guru.de/private/omada-controller_3.2.9-1_all.deb 
 
 RUN \
   echo exit 101 > /usr/sbin/policy-rc.d &&\
