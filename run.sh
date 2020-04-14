@@ -4,11 +4,12 @@ version=latest
 mkdir -p /opt/tplink/$version/OmadaController/data
 mkdir -p /opt/tplink/$version/OmadaController/work
 mkdir -p /opt/tplink/$version/OmadaController/logs
+ln -s /opt/tplink/$version/OmadaController /opt/tplink/OmadaController
 
 groupadd -g 508 omadad
 useradd -u 508 -g 508 -d /opt/tplink/OmadaController omadad
 
-chown -R 508:508 /opt/tplink/OmadaController
+chown -R 508:508 /opt/tplink/$version/OmadaController
 
 omadadata="/opt/tplink/$version/OmadaController/data"
 omadawork="/opt/tplink/$version/OmadaController/work"
