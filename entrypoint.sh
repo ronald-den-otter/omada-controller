@@ -34,6 +34,7 @@ then
 fi
 
 export JAVA_HOME=/usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/jre
+#export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-armhf/jre
 
 echo "INFO: Starting Omada Controller"
 set -x
