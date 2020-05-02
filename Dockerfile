@@ -9,7 +9,7 @@ COPY entrypoint.sh /entrypoint.sh
 RUN \
   echo "**** Install Dependencies ****" &&\
   apt-get update &&\
-  DEBIAN_FRONTEND="noninteractive" apt-get install -y gosu net-tools tzdata wget curl mongodb oracle-java8-jdk jsvc &&\
+  DEBIAN_FRONTEND="noninteractive" apt-get install -y gosu net-tools tzdata wget curl mongodb oracle-java8-jdk jsvc --no-install-recommends &&\
   rm -rf /var/lib/apt/lists/* &&\
   echo "**** Setup omada User Account ****" &&\
   groupadd -g 508 omadad &&\

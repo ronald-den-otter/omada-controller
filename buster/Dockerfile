@@ -8,11 +8,9 @@ COPY entrypoint.sh /entrypoint.sh
 RUN \
   echo "**** Install Dependencies ****" &&\
   apt-get update &&\
-  DEBIAN_FRONTEND="noninteractive" apt-get install -y gosu net-tools tzdata wget curl mongodb openjdk-8-jdk --no-install-recommends &&\
-  DEBIAN_FRONTEND="noninteractive" apt-get -y autoremove --purge &&\
+  DEBIAN_FRONTEND="noninteractive" apt-get install -y gosu net-tools tzdata wget curl mongodb openjdk-8-jdk-headless --no-install-recommends &&\
   DEBIAN_FRONTEND="noninteractive" apt-get -y clean all &&\
   rm -rf /var/lib/apt/lists/* &&\
-  java -version &&\
   echo "**** Setup omada User Account ****" &&\
   groupadd -g 508 omadad &&\
   useradd -u 508 -g 508 -d /opt/tplink/OmadaController omadad &&\
