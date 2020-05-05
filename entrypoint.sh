@@ -24,6 +24,13 @@ do
   fi
 done
 
+# append smallfiles if set to true
+if [ "${SMALL_FILES}" = "true" ]
+then
+  echo "INFO: Enabling smallfiles"
+  sed -i "s#eap.mongod.args=\(.*\)#eap.mongod.args=--smallfiles \1#" /opt/tplink/OmadaController/properties/mongodb.properties 
+fi
+
 # check to see if there is a db directory; create it if it is missing
 if [ ! -d "/opt/tplink/OmadaController/data/db" ]
 then
